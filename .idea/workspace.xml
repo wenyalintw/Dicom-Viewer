@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="31c7a535-cf54-4c6b-b518-f9c4b7039e50" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/2D_Processing.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/3D_Processing.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dicom_Viewer/threeD/threeD_module.py" beforeDir="false" afterPath="$PROJECT_DIR$/Dicom_Viewer/threeD/threeD_module.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dicom_Viewer/threeD/vol_view.ui" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dicom_Viewer/threeD/vol_view_module.ui" beforeDir="false" afterPath="$PROJECT_DIR$/Dicom_Viewer/threeD/vol_view_module.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dicom_Viewer/mainwindow.py" beforeDir="false" afterPath="$PROJECT_DIR$/Dicom_Viewer/mainwindow.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,8 +17,8 @@
         <entry file="file://$PROJECT_DIR$/readme.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="224">
-                <caret line="52" column="25" lean-forward="true" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
+              <first_editor relative-caret-position="143">
+                <caret line="9" column="86" lean-forward="true" selection-start-line="9" selection-start-column="86" selection-end-line="9" selection-end-column="86" />
               </first_editor>
               <second_editor />
             </state>
@@ -33,8 +28,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Dicom_Viewer/mainwindow.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+            <state relative-caret-position="302">
+              <caret line="84" lean-forward="true" selection-start-line="84" selection-end-line="84" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -162,6 +157,7 @@
         <option value="$PROJECT_DIR$/threeD/vol_view_module.py" />
         <option value="$PROJECT_DIR$/threeD/threeD_module.py" />
         <option value="$PROJECT_DIR$/Dicom_Viewer/threeD/threeD_module.py" />
+        <option value="$PROJECT_DIR$/Dicom_Viewer/mainwindow.py" />
         <option value="$PROJECT_DIR$/readme.md" />
       </list>
     </option>
@@ -571,12 +567,12 @@
       <updated>1545378915569</updated>
       <workItem from="1555151862775" duration="14966000" />
       <workItem from="1555178161351" duration="3602000" />
-      <workItem from="1555186607189" duration="1699000" />
+      <workItem from="1555186607189" duration="4242000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20267000" />
+    <option name="totallyTimeSpent" value="22810000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -837,16 +833,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dicom_Viewer/mainwindow.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Dicom_Viewer/threeD/threeD_module.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
@@ -873,11 +859,21 @@
     <entry file="file://$PROJECT_DIR$/resources/3D_Volume.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/Dicom_Viewer/mainwindow.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="84" lean-forward="true" selection-start-line="84" selection-end-line="84" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/readme.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="224">
-            <caret line="52" column="25" lean-forward="true" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
+          <first_editor relative-caret-position="143">
+            <caret line="9" column="86" lean-forward="true" selection-start-line="9" selection-start-column="86" selection-end-line="9" selection-end-column="86" />
           </first_editor>
           <second_editor />
         </state>

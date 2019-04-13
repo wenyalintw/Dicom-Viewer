@@ -87,6 +87,6 @@ class CMainWindow(QMainWindow):
 if __name__ == '__main__':
     app = QApplication(sys.argv)  # QApplication eats argv in constructor
     window = CMainWindow()
-    window.setWindowTitle('Medical Image Processing - Final Project')
+    window.setWindowTitle('Dicom Viewer Project')
     window.show()
     sys.exit(app.exec_())
