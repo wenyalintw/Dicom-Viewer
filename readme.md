@@ -68,3 +68,8 @@
     >加入對3D voxel影像進行更複雜的影像處理功能
 - Make it distributable
     >包裝成release版本，成為可轉散發軟體。希望能支援跨平台運作（window、macOS）
+    
+## How to use it?
+Project root will be Dicom_Viewer, just clone it and run mainwindow.py.
+
+Strictly follow the package version in requirements.txt is not necessary.

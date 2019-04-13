@@ -1,0 +1,6 @@
+matplotlib==3.0.3
+numpy==1.15.4
+opencv-python==3.4.3.18
+packaging==18.0
+pydicom==1.2.0
+PyQt5==5.11.3
