@@ -138,7 +138,7 @@
       </layout>
      </item>
      <item row="1" column="0">
-      <widget class="QMyGraphicsView" name="graphicsView">
+      <widget class="QGraphicsView" name="graphicsView">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
          <horstretch>0</horstretch>
@@ -154,13 +154,6 @@
    </item>
   </layout>
  </widget>
- <customwidgets>
-  <customwidget>
-   <class>QMyGraphicsView</class>
-   <extends>QGraphicsView</extends>
-   <header location="global">qmygraphicsview.h</header>
-  </customwidget>
- </customwidgets>
  <resources/>
  <connections/>
 </ui>

@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="31c7a535-cf54-4c6b-b518-f9c4b7039e50" name="Default Changelist" comment="" />
+    <list default="true" id="31c7a535-cf54-4c6b-b518-f9c4b7039e50" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/2D_Processing.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/3D_Processing.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dicom_Viewer/threeD/threeD_module.py" beforeDir="false" afterPath="$PROJECT_DIR$/Dicom_Viewer/threeD/threeD_module.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dicom_Viewer/threeD/vol_view.ui" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dicom_Viewer/threeD/vol_view_module.ui" beforeDir="false" afterPath="$PROJECT_DIR$/Dicom_Viewer/threeD/vol_view_module.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,88 +19,69 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/threeD/threeD_module.py">
+        <entry file="file://$PROJECT_DIR$/readme.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="224">
+                <caret line="52" column="25" lean-forward="true" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dicom_Viewer/mainwindow.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="93" column="34" selection-start-line="93" selection-start-column="34" selection-end-line="93" selection-end-column="34" />
+            <state relative-caret-position="150">
+              <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
-                <marker date="1555182475496" expanded="true" signature="4984:5023" ph="..." />
-                <marker date="1555182475496" expanded="true" signature="5059:5060" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/threeD/matinqt.py">
+        <entry file="file://$PROJECT_DIR$/Dicom_Viewer/threeD/loaddicomfile.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="1560">
+              <caret line="108" selection-start-line="108" selection-end-line="108" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dicom_Viewer/threeD/threeD_module.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="130">
+              <caret line="240" selection-start-line="240" selection-end-line="240" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dicom_Viewer/threeD/vol_view_module.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="115">
+              <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dicom_Viewer/threeD/matinqt.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
               <folding>
                 <element signature="e#0#80#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/threeD/vol_view_module.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-172">
-              <caret line="21" column="45" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../神農/影像分割/code test/3d_Seg/threeD_module.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="120" column="35" lean-forward="true" selection-start-line="120" selection-end-line="121" />
-              <folding>
-                <element signature="e#8107#9197#1" />
-                <element signature="e#10141#11293#0" />
-                <element signature="e#11328#11719#0" />
-                <element signature="e#11758#13212#0" />
-                <element signature="e#13250#13514#0" />
-                <element signature="e#13550#13838#0" />
-                <element signature="e#13874#14045#0" />
-                <element signature="e#14085#14313#0" />
-                <element signature="e#14357#14577#0" />
-                <element signature="e#14617#14882#0" />
-                <element signature="e#14916#15827#0" />
-                <element signature="e#16026#16589#0" />
-                <element signature="e#16628#16815#0" />
-                <element signature="e#16849#16913#0" />
-                <element signature="e#16947#16986#0" />
-                <element signature="e#17016#18880#0" />
-                <element signature="e#18915#23809#0" />
-                <element signature="e#23844#24053#0" />
-                <element signature="e#24094#25385#0" />
-                <element signature="e#25424#25448#0" />
-                <element signature="e#25499#27231#0" />
-                <element signature="e#27273#27893#0" />
-                <element signature="e#27937#28071#0" />
-                <element signature="e#28107#28260#0" />
-                <element signature="e#28308#28372#0" />
-                <element signature="e#28420#28709#0" />
-                <element signature="e#28758#29050#0" />
-                <element signature="e#29100#29394#0" />
-                <element signature="e#29444#29740#0" />
-                <element signature="e#29786#30068#0" />
-                <element signature="e#30115#30398#0" />
-                <element signature="e#30434#30877#0" />
-                <element signature="e#30915#31168#0" />
-                <element signature="e#31215#31858#0" />
-                <element signature="e#31894#32107#0" />
-                <element signature="e#32143#34730#0" />
-                <element signature="e#34766#35469#0" />
-                <element signature="e#35516#35603#0" />
-                <element signature="e#35648#35804#0" />
               </folding>
             </state>
           </provider>
@@ -109,8 +98,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>fast</find>
-      <find>writer</find>
       <find>WriterType</find>
       <find>dcmIn</find>
       <find>slice</find>
@@ -139,7 +126,12 @@
       <find>load</find>
       <find>info</find>
       <find>npy</find>
+      <find>ing</find>
+      <find>img</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -169,6 +161,8 @@
         <option value="$PROJECT_DIR$/threeD/loaddicomfile.py" />
         <option value="$PROJECT_DIR$/threeD/vol_view_module.py" />
         <option value="$PROJECT_DIR$/threeD/threeD_module.py" />
+        <option value="$PROJECT_DIR$/Dicom_Viewer/threeD/threeD_module.py" />
+        <option value="$PROJECT_DIR$/readme.md" />
       </list>
     </option>
   </component>
@@ -194,12 +188,14 @@
       </profile-state>
     </entry>
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <autoscrollFromSource ProjectPane="true" />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -210,17 +206,27 @@
             <path>
               <item name="Dicom_Viewer" type="b2602c69:ProjectViewProjectNode" />
               <item name="Dicom_Viewer" type="462c0819:PsiDirectoryNode" />
-              <item name="threeD" type="462c0819:PsiDirectoryNode" />
+              <item name="Dicom_Viewer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Dicom_Viewer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="3d_Seg" type="462c0819:PsiDirectoryNode" />
+              <item name="Dicom_Viewer" type="462c0819:PsiDirectoryNode" />
+              <item name="Dicom_Viewer" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Dicom_Viewer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Dicom_Viewer" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Dicom_Viewer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -230,15 +236,16 @@
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/threeD/resources" />
-      <recent name="$PROJECT_DIR$/resources" />
-      <recent name="$PROJECT_DIR$/twoD/resources" />
-      <recent name="$USER_HOME$/實驗室相關/神農/影像分割/code test/ITK practice" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Dicom_Viewer" />
       <recent name="$PROJECT_DIR$/threeD" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/Dicom_Viewer" />
+      <recent name="$PROJECT_DIR$/Dicom_Viewer/resources" />
+      <recent name="$PROJECT_DIR$/threeD/resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -253,7 +260,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.threeD_module">
+  <component name="RunManager" selected="Python.mainwindow">
     <configuration default="true" type="DjangoTestsConfigurationType">
       <module name="Project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -348,16 +355,13 @@
       <module name="MedIP_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Dicom_Viewer" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mainwindow.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Dicom_Viewer/mainwindow.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -392,6 +396,9 @@
       <module name="MedIP_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/threeD" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -544,10 +551,10 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.threeD_module" />
-        <item itemvalue="Python.threeD_module" />
-        <item itemvalue="Python.threeD_module" />
-        <item itemvalue="Python.threeD_module" />
+        <item itemvalue="Python.mainwindow" />
+        <item itemvalue="Python.mainwindow" />
+        <item itemvalue="Python.mainwindow" />
+        <item itemvalue="Python.mainwindow" />
         <item itemvalue="Python.threeD_module" />
       </list>
     </recent_temporary>
@@ -563,12 +570,13 @@
       <option name="presentableId" value="Default" />
       <updated>1545378915569</updated>
       <workItem from="1555151862775" duration="14966000" />
-      <workItem from="1555178161351" duration="1368000" />
+      <workItem from="1555178161351" duration="3602000" />
+      <workItem from="1555186607189" duration="1699000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16334000" />
+    <option name="totallyTimeSpent" value="20267000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -584,16 +592,16 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.32474965" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.1702432" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" order="0" />
       <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="2" weight="0.32871014" />
       <window_info anchor="bottom" id="Event Log" order="3" sideWeight="0.50214595" side_tool="true" weight="0.29643765" />
-      <window_info anchor="bottom" id="Python Console" order="4" sideWeight="0.49785408" visible="true" weight="0.35750636" />
+      <window_info anchor="bottom" id="Python Console" order="4" sideWeight="0.49785408" visible="true" weight="0.28880408" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Find" order="6" sideWeight="0.4985694" weight="0.46564886" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="8" />
       <window_info anchor="bottom" id="Debug" order="9" weight="0.41192788" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
@@ -658,32 +666,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../mkmessage/drawonpicture/testdicom.py" />
-    <entry file="file://$PROJECT_DIR$/../神農2d牙齒分割/level_set.py" />
-    <entry file="file://$USER_HOME$/Documents/anaconda2/envs/py3/lib/python3.6/site-packages/matplotlib/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/Documents/anaconda2/envs/py3/lib/python3.6/site-packages/itk/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="96" column="1" selection-start-line="96" selection-start-column="1" selection-end-line="96" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Documents/anaconda2/envs/py3/lib/python3.6/xml/etree/ElementTree.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="1195" selection-start-line="1195" selection-end-line="1195" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/實驗室相關/神農/影像分割/code test/ITK GAC/out.jpg" />
-    <entry file="file://$USER_HOME$/實驗室相關/神農/影像分割/code test/ITK GAC/GeodesicActiveContourImageFilterOutput4.png" />
-    <entry file="file://$USER_HOME$/Documents/學校課程/數位影像處理/color_transfer-master/example.py" />
-    <entry file="file://$USER_HOME$/Documents/學校課程/數位影像處理/ColorTransform.py" />
-    <entry file="file://$USER_HOME$/Documents/學校課程/數位影像處理/Project/paired data/Fade.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$USER_HOME$/Documents/學校課程/數位影像處理/Project/paired data/Restore.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -743,25 +725,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/background.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/twoD/.idea/modules.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/twoD/resources/undo.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/twoD/edgefunction.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="26" lean-forward="true" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/background.png" />
+    <entry file="file://$PROJECT_DIR$/twoD/.idea/modules.xml" />
+    <entry file="file://$PROJECT_DIR$/twoD/resources/undo.png" />
+    <entry file="file://$PROJECT_DIR$/twoD/edgefunction.py" />
     <entry file="file://$USER_HOME$/Documents/anaconda2/envs/py3/lib/python3.6/site-packages/PyQt5/uic/Loader/qobjectcreator.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="201">
@@ -778,105 +745,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/threeD/雜/main備份（大改座標前）.py" />
     <entry file="file://$PROJECT_DIR$/threeD/雜/Even_Smaller.png" />
-    <entry file="file://$PROJECT_DIR$/mainwindow.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="25" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/threeD/threeD_module.ui">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="627" lean-forward="true" selection-start-line="627" selection-end-line="627" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/threeD/resources/down_arrow.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/threeD/resources/double-arrow-down.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/twoD/twoD_module.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/twoD/qpaintlabel2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2745">
-          <caret line="183" column="14" lean-forward="true" selection-start-line="183" selection-start-column="14" selection-end-line="183" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/mainwindow.py" />
+    <entry file="file://$PROJECT_DIR$/threeD/threeD_module.ui" />
+    <entry file="file://$PROJECT_DIR$/threeD/resources/down_arrow.png" />
+    <entry file="file://$PROJECT_DIR$/threeD/resources/double-arrow-down.png" />
+    <entry file="file://$PROJECT_DIR$/twoD/twoD_module.py" />
+    <entry file="file://$PROJECT_DIR$/twoD/qpaintlabel2.py" />
     <entry file="file://$PROJECT_DIR$/3dview/rotate_axes3d.py" />
     <entry file="file://$PROJECT_DIR$/3dview/qmygraphicsview.py" />
     <entry file="file://$PROJECT_DIR$/3dview/loaddicomfile.py" />
     <entry file="file://$PROJECT_DIR$/3dview/cttest.py" />
     <entry file="file://$PROJECT_DIR$/3dview/3dviewmain.py" />
-    <entry file="file://$PROJECT_DIR$/threeD/loaddicomfile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="39" lean-forward="true" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/threeD/qpaintlabel3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/qmygraphicsview.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="10" selection-start-line="6" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/threeD/matinqt.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#0#80#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/threeD/vol_view_module.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-172">
-          <caret line="21" column="45" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/threeD/loaddicomfile.py" />
+    <entry file="file://$PROJECT_DIR$/threeD/qpaintlabel3.py" />
+    <entry file="file://$PROJECT_DIR$/qmygraphicsview.py" />
+    <entry file="file://$PROJECT_DIR$/threeD/matinqt.py" />
+    <entry file="file://$PROJECT_DIR$/threeD/vol_view_module.py" />
     <entry file="file://$PROJECT_DIR$/../神農/影像分割/code test/3d_Seg/threeD_module.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
-          <caret line="120" column="35" lean-forward="true" selection-start-line="120" selection-end-line="121" />
+          <caret line="120" column="35" selection-start-line="120" selection-end-line="121" />
           <folding>
             <element signature="e#8107#9197#1" />
             <element signature="e#10141#11293#0" />
@@ -921,15 +809,77 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/threeD/threeD_module.py">
+    <entry file="file://$PROJECT_DIR$/threeD/threeD_module.py" />
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_bundle/pydev_import_hook.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="93" column="34" selection-start-line="93" selection-start-column="34" selection-end-line="93" selection-end-column="34" />
+        <state relative-caret-position="160">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dicom_Viewer/threeD/matinqt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#80#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dicom_Viewer/threeD/vol_view_module.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1555182475496" expanded="true" signature="4984:5023" ph="..." />
-            <marker date="1555182475496" expanded="true" signature="5059:5060" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dicom_Viewer/mainwindow.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dicom_Viewer/threeD/threeD_module.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="240" selection-start-line="240" selection-end-line="240" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dicom_Viewer/threeD/loaddicomfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1560">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/3D_Processing.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/2D_Processing.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/3D_Volume.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="224">
+            <caret line="52" column="25" lean-forward="true" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

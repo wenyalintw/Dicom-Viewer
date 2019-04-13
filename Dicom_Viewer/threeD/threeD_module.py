@@ -12,8 +12,7 @@ class CthreeD(QDialog):
     def __init__(self):
         super().__init__()
         path = os.getcwd()
-        # TODO 拿掉註釋
-        #os.chdir(path + '/threeD')
+        os.chdir(path + '/threeD')
         self.directory = os.getcwd()
         loadUi('threeD_module.ui', self)
         self.setWindowTitle('3D Processing')
