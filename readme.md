@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/wenyalintw/Dicom_Viewer">
-    <img src="https://i.imgur.com/Uid1O3A.png" alt="Dicom Viewer" width="96" height="96">
+    <img src="resources/brain.png" alt="Dicom Viewer" width="96" height="96">
   </a>
   <h2 align="center">簡易醫學影像GUI (Dicom Viewer)</h2>
   <p align="center">能顯示 2D/3D Dicom影像的應用</p>
@@ -71,6 +71,6 @@
     >包裝成release版本，成為可轉散發軟體。希望能支援跨平台運作（window、macOS）
     
 ## How to use it?
-Project root will be Dicom_Viewer, just clone it and run mainwindow.py.
+Project root will be **/src**, just clone it and run mainwindow.py.
 
 Strictly follow the package version in requirements.txt is not necessary.
