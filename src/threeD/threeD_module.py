@@ -17,25 +17,17 @@ class CthreeD(QDialog):
         loadUi('threeD_module.ui', self)
         self.setWindowTitle('3D Processing')
         self.image = None
-        # self.draw=False
-        self.setMouseTracking(False)
         self.voxel = None
         self.processedvoxel = None
         self.v1, self.v2, self.v3 = None, None, None
         self.volWindow = None
         self.dicomButton.clicked.connect(self.dicom_clicked)
-        self.axial_hSlider.valueChanged.connect(self.axial_hslider_changed)
-        self.axial_vSlider.valueChanged.connect(self.axial_vslider_changed)
-        self.axialmoveUD = 0
-        self.axialmoveLR = 0
-        self.sagittal_hSlider.valueChanged.connect(self.sagittal_hslider_changed)
-        self.sagittal_vSlider.valueChanged.connect(self.sagittal_vslider_changed)
-        self.sagittalmoveUD = 0
-        self.sagittalmoveLR = 0
-        self.coronal_hSlider.valueChanged.connect(self.coronal_hslider_changed)
-        self.coronal_vSlider.valueChanged.connect(self.coronal_vslider_changed)
-        self.coronalmoveUD = 0
-        self.coronalmoveLR = 0
+        self.axial_hSlider.valueChanged.connect(self.updateimg)
+        self.axial_vSlider.valueChanged.connect(self.updateimg)
+        self.sagittal_hSlider.valueChanged.connect(self.updateimg)
+        self.sagittal_vSlider.valueChanged.connect(self.updateimg)
+        self.coronal_hSlider.valueChanged.connect(self.updateimg)
+        self.coronal_vSlider.valueChanged.connect(self.updateimg)
         self.colormap = None
         # 這樣可以把"被activate"的Item轉成str傳入connect的function（也可以用int之類的，會被enum）
         self.colormapBox.activated[str].connect(self.colormap_choice)
@@ -54,7 +46,13 @@ class CthreeD(QDialog):
                              'WINTER': cv2.COLORMAP_WINTER
                              }
         self.volButton.clicked.connect(self.open_3dview)
-        # 試過：setRowStretch, setSpacing, setGeometry, addWidget, addItem, addStretch，最後採用insertSpacerItem
+
+        self.w, self.h = self.imgLabel_1.width(), self.imgLabel_1.height()
+
+        self.imgLabel_1.type = 'axial'
+        self.imgLabel_2.type = 'sagittal'
+        self.imgLabel_3.type = 'coronal'
+
         self.axialGrid.setSpacing(0)
         self.saggitalGrid.setSpacing(0)
         self.coronalGrid.setSpacing(0)
@@ -95,11 +93,9 @@ class CthreeD(QDialog):
         self.downscaled = 2
         self.dsampleButton.clicked.connect(self.downsample)
 
-
-
-
     def downsample(self):
         self.processedvoxel = self.processedvoxel[::self.downscaled, ::self.downscaled, ::self.downscaled]
+        self.update_shape()
         self.updateimg()
 
     def save_npy_clicked(self):
@@ -112,6 +108,7 @@ class CthreeD(QDialog):
     def load_npy_clicked(self):
         fname, _filter = QFileDialog.getOpenFileName(self, 'open file', '~/Desktop', "Image Files (*.NPY *.npy)")
         self.processedvoxel = np.load(fname)
+        self.update_shape()
         self.savetemp()
         self.updateimg()
 
@@ -130,13 +127,11 @@ class CthreeD(QDialog):
                                            self.sagittal_hSlider.maximum() / self.imgLabel_2.width())
             self.sagittal_vSlider.setValue(self.imgLabel_2.crosscenter[1] *
                                            self.sagittal_vSlider.maximum() / self.imgLabel_2.height())
-
         elif _type == 'coronal':
             self.coronal_hSlider.setValue(self.imgLabel_3.crosscenter[0] *
                                           self.coronal_hSlider.maximum() / self.imgLabel_3.width())
             self.coronal_vSlider.setValue(self.imgLabel_3.crosscenter[1] *
                                           self.coronal_vSlider.maximum() / self.imgLabel_3.height())
-            pass
         else:
             pass
 
@@ -170,7 +165,8 @@ class CthreeD(QDialog):
 
     def resizeEvent(self, event):
         super().resizeEvent(event)
-        # resize的時候兩個都要重畫，才會維持一樣大小
+        self.w = self.imgLabel_1.width()
+        self.h = self.imgLabel_1.height()
         if self.processedvoxel is not None:
             self.updateimg()
 
@@ -183,58 +179,10 @@ class CthreeD(QDialog):
         self.colormap = self.colormapDict[text]
         self.updateimg()
 
-    def coronal_hslider_changed(self):
-        _max = self.coronal_hSlider.maximum()
-        _min = self.coronal_hSlider.minimum()
-        mid = (_max-_min)/2
-        self.coronalmoveLR = int((self.coronal_hSlider.value()-mid) * (self.v3 / (2*mid)))
-        self.updateimg()
-        self.axial_hSlider.setValue(self.coronal_hSlider.value())
-
-    def coronal_vslider_changed(self):
-        _max = self.coronal_vSlider.maximum()
-        _min = self.coronal_vSlider.minimum()
-        mid = (_max-_min)/2
-        self.coronalmoveUD = int((self.coronal_vSlider.value()-mid) * (self.v1 / (2*mid)))
-        self.updateimg()
-        self.sagittal_vSlider.setValue(self.coronal_vSlider.value())
-
-    def sagittal_hslider_changed(self):
-        _max = self.sagittal_hSlider.maximum()
-        _min = self.sagittal_hSlider.minimum()
-        mid = (_max-_min)/2
-        self.sagittalmoveLR = int((self.sagittal_hSlider.value()-mid) * (self.v2 / (2*mid)))
-        self.updateimg()
-        self.axial_vSlider.setValue(self.sagittal_hSlider.value())
-
-    def sagittal_vslider_changed(self):
-        _max = self.sagittal_vSlider.maximum()
-        _min = self.sagittal_vSlider.minimum()
-        mid = (_max-_min)/2
-        self.sagittalmoveUD = int((self.sagittal_vSlider.value()-mid) * (self.v1 / (2*mid)))
-        self.updateimg()
-        self.coronal_vSlider.setValue(self.sagittal_vSlider.value())
-
-    def axial_hslider_changed(self):
-        _max = self.axial_hSlider.maximum()
-        _min = self.axial_hSlider.minimum()
-        mid = (_max-_min)/2
-        self.axialmoveLR = int((self.axial_hSlider.value()-mid) * (self.v3 / (2*mid)))
-        self.updateimg()
-        self.coronal_hSlider.setValue(self.axial_hSlider.value())
-
-    def axial_vslider_changed(self):
-        _max = self.axial_vSlider.maximum()
-        _min = self.axial_vSlider.minimum()
-        mid = (_max-_min)/2
-        self.axialmoveUD = int((self.axial_vSlider.value()-mid) * (self.v2 / (2*mid)))
-        self.updateimg()
-        self.sagittal_hSlider.setValue(self.axial_vSlider.value())
-
     def dicom_clicked(self):
-        fname = QFileDialog.getExistingDirectory(self, 'choose dicom directory')
-        print(fname)
-        self.load_dicomfile(fname)
+        dname = QFileDialog.getExistingDirectory(self, 'choose dicom directory')
+        print(dname)
+        self.load_dicomfile(dname)
 
     def load_dicomfile(self, dname):
         self.dcmList.clear()
@@ -243,9 +191,11 @@ class CthreeD(QDialog):
         self.voxel = self.linear_convert(imgs)
         self.processedvoxel = self.voxel.copy()
 
-        self.imgLabel_1.type = 'axial'
-        self.imgLabel_2.type = 'sagittal'
-        self.imgLabel_3.type = 'coronal'
+        self.update_shape()
+
+        self.imgLabel_1.setMouseTracking(True)
+        self.imgLabel_2.setMouseTracking(True)
+        self.imgLabel_3.setMouseTracking(True)
 
         self.updateimg()
         self.set_directory()
@@ -255,43 +205,44 @@ class CthreeD(QDialog):
         self.dcmInfo = ldf.load_dcm_info(dname, self.privatecheckBox.isChecked())
         self.updatelist()
 
+    def update_shape(self):
+        self.v1, self.v2, self.v3 = self.processedvoxel.shape
+        self.sagittal_vSlider.setMaximum(self.v1-1)
+        self.coronal_vSlider.setMaximum(self.v1-1)
+        self.sagittal_hSlider.setMaximum(self.v2-1)
+        self.axial_vSlider.setMaximum(self.v2-1)
+        self.coronal_hSlider.setMaximum(self.v3-1)
+        self.axial_hSlider.setMaximum(self.v3-1)
+        self.sagittal_vSlider.setValue(self.sagittal_vSlider.maximum()//2)
+        self.coronal_vSlider.setValue(self.coronal_vSlider.maximum()//2)
+        self.sagittal_hSlider.setValue(self.sagittal_hSlider.maximum()//2)
+        self.axial_vSlider.setValue(self.axial_vSlider.maximum()//2)
+        self.coronal_hSlider.setValue(self.coronal_hSlider.maximum()//2)
+        self.axial_hSlider.setValue(self.axial_hSlider.maximum()//2)
+
     def updatelist(self):
         for item in self.dcmInfo:
             # 單純字串的話，可以不需要QListWidgetItem包裝也沒關係
             self.dcmList.addItem(QListWidgetItem('%-20s\t:  %s' % (item[0], item[1])))
 
     def updateimg(self):
-        v1, v2, v3 = self.processedvoxel.shape
-        self.v1, self.v2, self.v3 = v1, v2, v3
-
-        a_loc = int(v1/2)-self.sagittalmoveUD
-        s_loc = int(v3/2)+self.axialmoveLR
-        c_loc = int(v2/2)+self.axialmoveUD
-
-        if a_loc >= v1:
-            a_loc = v1-1
-        if s_loc >= v3:
-            s_loc = v3-1
-        if c_loc >= v2:
-            c_loc = v2-1
+        a_loc = self.sagittal_vSlider.value()
+        c_loc = self.axial_vSlider.value()
+        s_loc = self.axial_hSlider.value()
 
         axial = (self.processedvoxel[a_loc, :, :]).astype(np.uint8).copy()
-        sagittal = np.flipud((self.processedvoxel[:, :, s_loc]).astype(np.uint8)).copy()
-        coronal = np.flipud((self.processedvoxel[:, c_loc, :]).astype(np.uint8)).copy()
+        sagittal = (self.processedvoxel[:, :, s_loc]).astype(np.uint8).copy()
+        coronal = (self.processedvoxel[:, c_loc, :]).astype(np.uint8).copy()
 
         self.imgLabel_1.slice_loc = [s_loc, c_loc, a_loc]
         self.imgLabel_2.slice_loc = [s_loc, c_loc, a_loc]
         self.imgLabel_3.slice_loc = [s_loc, c_loc, a_loc]
 
         if self.cross_recalc:
-            self.imgLabel_1.crosscenter = [self.imgLabel_1.width()/2+self.axialmoveLR*(self.imgLabel_1.width()/v3),
-                                           self.imgLabel_1.height()/2+self.axialmoveUD*(self.imgLabel_1.height()/v2)]
-            self.imgLabel_2.crosscenter = [self.imgLabel_2.width()/2+self.sagittalmoveLR*(self.imgLabel_2.width()/v2),
-                                           self.imgLabel_2.height()/2+self.sagittalmoveUD*(self.imgLabel_2.height()/v1)]
-            self.imgLabel_3.crosscenter = [self.imgLabel_3.width()/2+self.coronalmoveLR*(self.imgLabel_3.width()/v3),
-                                           self.imgLabel_3.height()/2+self.coronalmoveUD*(self.imgLabel_3.height()/v1)]
+            self.imgLabel_1.crosscenter = [self.w*s_loc//self.v3, self.h*c_loc//self.v2]
+            self.imgLabel_2.crosscenter = [self.w*c_loc//self.v2, self.h*a_loc//self.v1]
+            self.imgLabel_3.crosscenter = [self.w*s_loc//self.v3, self.h*a_loc//self.v1]
 
-        # 因AUTUMN的code是0，所以不用not self.colormap
         if self.colormap is None:
             self.imgLabel_1.processedImage = axial
             self.imgLabel_2.processedImage = sagittal
@@ -300,10 +251,6 @@ class CthreeD(QDialog):
             self.imgLabel_1.processedImage = cv2.applyColorMap(axial, self.colormap)
             self.imgLabel_2.processedImage = cv2.applyColorMap(sagittal, self.colormap)
             self.imgLabel_3.processedImage = cv2.applyColorMap(coronal, self.colormap)
-
-        self.imgLabel_1.setMouseTracking(True)
-        self.imgLabel_2.setMouseTracking(True)
-        self.imgLabel_3.setMouseTracking(True)
 
         self.imgLabel_1.display_image(1)
         self.imgLabel_2.display_image(1)
@@ -314,7 +261,6 @@ class CthreeD(QDialog):
         convert_scale = 255.0 / (np.max(img) - np.min(img))
         converted_img = convert_scale * img - (convert_scale * np.min(img))
         return converted_img
-
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)

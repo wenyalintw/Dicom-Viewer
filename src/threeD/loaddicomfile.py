@@ -3,7 +3,7 @@ import pydicom
 import os
 import scipy.ndimage
 from skimage import measure
-
+import glob
 
 def load_dcm_info(path, private):
     # 取第一個slice就好
@@ -62,8 +62,9 @@ def load_dcm_info(path, private):
 
 
 def load_scan(path):
-    slices = [pydicom.read_file(path + '/' + s, force=True) for s in os.listdir(path)]
-
+    f = glob.glob(rf'{path}/*.dcm')
+    slices = [pydicom.read_file(s, force=True) for s in f]
+    # slices = [pydicom.read_file(path + '/' + s, force=True) for s in os.listdir(path)]
     for s in slices:
         s.file_meta.TransferSyntaxUID = pydicom.uid.ImplicitVRLittleEndian
     slices.sort(key=lambda x: int(x.InstanceNumber))
@@ -75,11 +76,15 @@ def load_scan(path):
     for s in slices:
         s.SliceThickness = slice_thickness
 
+    # orientation = slices[0].ImageOrientationPatient
+    # print(orientation)
+
+
     return slices
 
 
 def get_pixels_hu(scans):
-    image = np.stack([s.pixel_array for s in scans])
+    image = np.flipud(np.stack([s.pixel_array for s in scans]))
     # Convert to int16 (from sometimes int16),
     # should be possible as values should always be low enough (<32k)
     image = image.astype(np.int16)

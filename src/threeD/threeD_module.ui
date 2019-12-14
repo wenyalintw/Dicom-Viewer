@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1163</width>
-    <height>609</height>
+    <width>1140</width>
+    <height>585</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -943,5 +943,102 @@ QComboBox::down-arrow {
   </customwidget>
  </customwidgets>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>axial_hSlider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>coronal_hSlider</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>273</x>
+     <y>226</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>908</x>
+     <y>217</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>coronal_hSlider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>axial_hSlider</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>908</x>
+     <y>217</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>234</x>
+     <y>212</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>axial_vSlider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>sagittal_hSlider</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>28</x>
+     <y>344</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>479</x>
+     <y>215</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sagittal_hSlider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>axial_vSlider</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>488</x>
+     <y>219</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>249</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sagittal_vSlider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>coronal_vSlider</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>388</x>
+     <y>364</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>762</x>
+     <y>368</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>coronal_vSlider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>sagittal_vSlider</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>762</x>
+     <y>294</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>388</x>
+     <y>307</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

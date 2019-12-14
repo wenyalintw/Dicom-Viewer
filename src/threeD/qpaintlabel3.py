@@ -13,9 +13,8 @@ class QPaintLabel3(QLabel):
     def __init__(self, parent):
         super(QLabel, self).__init__(parent)
 
-        self.setMouseTracking(False)
         self.setMinimumSize(1, 1)
-
+        self.setMouseTracking(False)
         self.image = None
         self.processedImage = None
         self.imgr, self.imgc = None, None
