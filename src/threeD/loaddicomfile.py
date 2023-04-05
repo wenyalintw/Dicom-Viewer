@@ -5,60 +5,52 @@ import scipy.ndimage
 from skimage import measure
 import glob
 
-def load_dcm_info(path, private):
+def load_dcm_info(path):
     # 取第一個slice就好
     slice_for_info = pydicom.read_file(path + '/' + os.listdir(path)[0], force=True)
+    ax_res = ('Axial Spacing', float(slice_for_info.SliceThickness))
+    sag_res = ('Sagittal Spacing', float(slice_for_info.PixelSpacing[0]))
+    cor_res = ('Coronal Spacing', float(slice_for_info.PixelSpacing[0]))
 
+    try:
+        name = ('Patient Name', str(slice_for_info.PatientName).split('  ', 1)[1])
+    except:
+        name = ('Patient Name', 'Anonymous')
+    try:
+        _id = ('Patient ID', str(slice_for_info.PatientID))
+    except:
+        _id = ('Patient ID', 'Unknown')
+    try:
+        age = ('Patient Age', str(slice_for_info.PatientAge))
+    except:
+        age = ('Patient Age', 'Unknown')
 
-    if private:
-        name = ('Patient Name', 'Private')
-        _id = ('Patient ID', 'Private')
-        age = ('Patient Age', 'Private')
-        sex = ('Patient Sex', 'Private')
-        institution_name = ('Institution', 'Private')
-        date = ('Date', 'Private')
-        modality = ('Modality', 'Private')
-        manufacturer = ('Manufacturer', 'Private')
-    else:
-        try:
-            name = ('Patient Name', str(slice_for_info.PatientName).split('  ', 1)[1])
-        except:
-            name = ('Patient Name', 'Anonymous')
-        try:
-            _id = ('Patient ID', str(slice_for_info.PatientID))
-        except:
-            _id = ('Patient ID', 'Unknown')
-        try:
-            age = ('Patient Age', str(slice_for_info.PatientAge))
-        except:
-            age = ('Patient Age', 'Unknown')
+    try:
+        sex = ('Patient Sex', str(slice_for_info.PatientSex))
+    except:
+        sex = ('Patient Sex', 'Unknown')
 
-        try:
-            sex = ('Patient Sex', str(slice_for_info.PatientSex))
-        except:
-            sex = ('Patient Sex', 'Unknown')
+    try:
+        institution_name = ('Institution', str(slice_for_info.InstitutionName))
+    except:
+        institution_name = ('Institution', 'Unknown')
 
-        try:
-            institution_name = ('Institution', str(slice_for_info.InstitutionName))
-        except:
-            institution_name = ('Institution', 'Unknown')
+    try:
+        date = ('Date', str(slice_for_info.InstanceCreationDate))
+    except:
+        date = ('Date', 'Unknown')
 
-        try:
-            date = ('Date', str(slice_for_info.InstanceCreationDate))
-        except:
-            date = ('Date', 'Unknown')
+    try:
+        modality = ('Modality', str(slice_for_info.Modality))
+    except:
+        modality = ('Modality', 'Unknown')
 
-        try:
-            modality = ('Modality', str(slice_for_info.Modality))
-        except:
-            modality = ('Modality', 'Unknown')
-
-        try:
-            manufacturer = ('Manufacturer', str(slice_for_info.Manufacturer))
-        except:
-            manufacturer = ('Manufacturer', 'Unknown')
-    info = [name, _id, age, sex, date, institution_name, modality, manufacturer]
-    return info
+    try:
+        manufacturer = ('Manufacturer', str(slice_for_info.Manufacturer))
+    except:
+        manufacturer = ('Manufacturer', 'Unknown')
+    info = [name, _id, age, sex, date, institution_name, modality, manufacturer, ax_res, sag_res, cor_res]
+    return info, [ax_res[1], sag_res[1], cor_res[1]]
 
 
 def load_scan(path):
